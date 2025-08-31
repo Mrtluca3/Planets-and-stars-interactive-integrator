@@ -51,17 +51,22 @@ In particular, the following objects can be initialized:
 
    METHODS:
    4.1 All Integrator methods, except `leapfrog`, `verlet`, and `RK4`, which are redefined.
+
    4.2 `show()`: method to plot at the end of integration.
+
    4.3 `leapfrog(self,  dt: numbers.Real, N: int, position=111, planetlist: list=None)`:
        `dt`, `N`, and `planetlist` as in Integrator;
        `position` specifies the subplot or figure position.
        Similarly for `verlet(dt, N, position=111, planetlist=None)` and `RK4(dt, N, position=111, planetlist=None)`.
+
    4.4 `all_methods(self, dt: numbers.Real, N: int)`: integrates and plots the system using all three methods; the `planetlist` attribute of Graph is updated at step N with the RK4 method.
+
    4.5 `reboot()`: restores initial conditions.
+
    4.6 `clear_figure()`: resets/clears the figure.
 
 
-6. Interactive_plot(planetlist:list | str, Ndim:int =None, figsize: tuple[int, int]=(10,10), delay: numbers.Real =10, fixed_axes: bool=False, Nmaxintegration: int =10000000, blackbackground: bool=True):
+7. Interactive_plot(planetlist:list | str, Ndim:int =None, figsize: tuple[int, int]=(10,10), delay: numbers.Real =10, fixed_axes: bool=False, Nmaxintegration: int =10000000, blackbackground: bool=True):
    Integrator object that produces a 2D/3D plot evolving over time.
 
    ATTRIBUTES:
@@ -73,6 +78,7 @@ In particular, the following objects can be initialized:
 
    METHODS:
    5.1 All methods from Integrator and Graph, except `leapfrog`, `verlet`, and `RK4`, which are redefined.
+
    5.2 `leapfrog(self, dt: numbers.Real, N: int, position=111)`:
        `dt`: integration step,
        `N`: number of steps executed BEFORE plotting a point; delay may be adjusted based on computation time (maximum between delay and the 1st integration time),
