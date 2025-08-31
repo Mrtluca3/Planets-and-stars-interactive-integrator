@@ -50,6 +50,7 @@ In particular, the following objects can be initialized:
    - `blackbackground`: flag to control the figure background color.
 
    METHODS:
+   
    4.1 All Integrator methods, except `leapfrog`, `verlet`, and `RK4`, which are redefined.
 
    4.2 `show()`: method to plot at the end of integration.
@@ -77,6 +78,7 @@ In particular, the following objects can be initialized:
    - `Nmaxintegration`: maximum number of plot updates; stops integration when reached.
 
    METHODS:
+   
    5.1 All methods from Integrator and Graph, except `leapfrog`, `verlet`, and `RK4`, which are redefined.
 
    5.2 `leapfrog(self, dt: numbers.Real, N: int, position=111)`:
