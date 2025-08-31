@@ -12,6 +12,7 @@ In particular, the following objects can be initialized:
    `T_energy()`: method to calculate the kinetic energy.
 
 3. Integrator(planetlist:list | str, Ndim: int =None, terminal_print: bool =False):
+ 
    ATTRIBUTES:
    - `planetlist`: can be either
      - a list of `Planet` objects
@@ -37,7 +38,7 @@ In particular, the following objects can be initialized:
        `step_RK4(dt, planetlist=None)`: single integration step with RK4.
        By default, `planetlist` is the list used to initialize the Integrator, but a different list can be provided.
 
-5. Plot(planetlist:list | str, Ndim: int=None, figsize: tuple[int, int]=(10,10), dtperpoint=None, blackbackground:bool =True):
+4. Plot(planetlist:list | str, Ndim: int=None, figsize: tuple[int, int]=(10,10), dtperpoint=None, blackbackground:bool =True):
    Integrator object that produces a 2D/3D plot at the end of the integration.
 
    ATTRIBUTES:
@@ -67,7 +68,7 @@ In particular, the following objects can be initialized:
    4.6 `clear_figure()`: resets/clears the figure.
 
 
-7. Interactive_plot(planetlist:list | str, Ndim:int =None, figsize: tuple[int, int]=(10,10), delay: numbers.Real =10, fixed_axes: bool=False, Nmaxintegration: int =10000000, blackbackground: bool=True):
+5. Interactive_plot(planetlist:list | str, Ndim:int =None, figsize: tuple[int, int]=(10,10), delay: numbers.Real =10, fixed_axes: bool=False, Nmaxintegration: int =10000000, blackbackground: bool=True):
    Integrator object that produces a 2D/3D plot evolving over time.
 
    ATTRIBUTES:
